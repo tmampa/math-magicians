@@ -1,5 +1,5 @@
-import React from "react";
-import "../App.css";
+import React from 'react';
+import '../App.css';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -21,7 +21,8 @@ class Calculator extends React.Component {
             +/-
           </button>
           <button type="button" className="grayBtn">
-            %{" "}
+            %
+            {' '}
           </button>
           <button type="button" className="orangeBtn">
             ÷
