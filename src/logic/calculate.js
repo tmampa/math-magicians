@@ -1,11 +1,11 @@
-import operate from './operate';
+import operate from "./operate";
 
 function isNumber(item) {
   return !!item.match(/[0-9]+/);
 }
 
 export default function calculate(obj, buttonName) {
-  if (buttonName === 'AC') {
+  if (buttonName === "AC") {
     return {
       total: 0,
       next: null,
@@ -14,7 +14,7 @@ export default function calculate(obj, buttonName) {
   }
 
   if (isNumber(buttonName)) {
-    if (buttonName === '0' && obj.next === '0') {
+    if (buttonName === "0" && obj.next === "0") {
       return {};
     }
 
@@ -37,26 +37,26 @@ export default function calculate(obj, buttonName) {
     };
   }
 
-  if (buttonName === '.') {
+  if (buttonName === ".") {
     if (obj.next) {
-      if (obj.next.includes('.')) {
+      if (obj.next.includes(".")) {
         return {};
       }
       return { next: `${obj.next}.` };
     }
     if (obj.operation) {
-      return { next: '0.' };
+      return { next: "0." };
     }
     if (obj.total) {
-      if (obj.total.includes('.')) {
+      if (obj.total.includes(".")) {
         return {};
       }
       return { total: `${obj.total}.` };
     }
-    return { total: '0.' };
+    return { total: "0." };
   }
 
-  if (buttonName === '=') {
+  if (buttonName === "=") {
     if (obj.next && obj.operation) {
       try {
         return {
@@ -66,7 +66,7 @@ export default function calculate(obj, buttonName) {
         };
       } catch {
         return {
-          total: 'Unknown operation',
+          total: "Unknown operation",
           next: null,
           operation: null,
         };
@@ -76,7 +76,7 @@ export default function calculate(obj, buttonName) {
     return {};
   }
 
-  if (buttonName === '+/-') {
+  if (buttonName === "+/-") {
     if (obj.next) {
       return { next: (-1 * parseFloat(obj.next)).toString() };
     }
@@ -87,11 +87,19 @@ export default function calculate(obj, buttonName) {
   }
 
   if (obj.operation) {
-    return {
-      total: operate(obj.total, obj.next, obj.operation),
-      next: null,
-      operation: buttonName,
-    };
+    try {
+      return {
+        total: operate(obj.total, obj.next, obj.operation),
+        next: null,
+        operation: buttonName,
+      };
+    } catch {
+      return {
+        total: obj.total,
+        next: null,
+        operation: buttonName,
+      };
+    }
   }
 
   if (!obj.next) {
