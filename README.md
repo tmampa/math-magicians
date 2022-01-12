@@ -4,7 +4,7 @@
 > - Make simple calculations.
 > - Read a random math-related quote.
 
-![App image coming soon]()
+![App image](./public/Screenshot.png)
 
 ## 🏗️ Built With
 
