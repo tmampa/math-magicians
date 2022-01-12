@@ -87,11 +87,19 @@ export default function calculate(obj, buttonName) {
   }
 
   if (obj.operation) {
-    return {
-      total: operate(obj.total, obj.next, obj.operation),
-      next: null,
-      operation: buttonName,
-    };
+    try {
+      return {
+        total: operate(obj.total, obj.next, obj.operation),
+        next: null,
+        operation: buttonName,
+      };
+    } catch {
+      return {
+        total: obj.total,
+        next: null,
+        operation: buttonName,
+      };
+    }
   }
 
   if (!obj.next) {
