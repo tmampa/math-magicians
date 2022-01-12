@@ -73,7 +73,7 @@ The following tools help make easier to work with sample code.
 - [NVM](https://github.com/nvm-sh/nvm)
 
 
-## 👨🏾‍💻👩🏻 Author
+## 👨🏾‍💻 Author
 
 👤 **Tshephang Mampa** 
 
