@@ -1,23 +1,23 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "../App.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import '../App.css';
 
 const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: "/",
-      text: "Home",
+      path: '/',
+      text: 'Home',
     },
     {
       id: 2,
-      path: "/calculator",
-      text: "Calculator",
+      path: '/calculator',
+      text: 'Calculator',
     },
     {
       id: 3,
-      path: "/quote",
-      text: "Quote",
+      path: '/quote',
+      text: 'Quote',
     },
   ];
 
