@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import Calculator from './components/Calculator';
 import './App.css';
-import Navbar from './components/Navbar.js';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Quote from './pages/Quote';
 import NotMatch from './pages/NotMatch';
