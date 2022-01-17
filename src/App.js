@@ -1,9 +1,9 @@
 import { Route, Switch } from 'react-router-dom';
 import Calculator from './components/Calculator';
 import './App.css';
-import Navbar from './components/navbar';
-import Home from './components/Home';
-import Quote from './components/Quote';
+import Navbar from './components/Navbar.js';
+import Home from './pages/Home';
+import Quote from './pages/Quote';
 import NotMatch from './pages/NotMatch';
 
 function App() {
