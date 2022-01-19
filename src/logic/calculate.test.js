@@ -102,4 +102,24 @@ describe('unit tests for calculate.js', () => {
     });
   });
 
+  test('= is clicked the result should be error Unknown operation', () => {
+    //Arrange
+    const obj = {
+      total: 100,
+      next: 20,
+      operation: '*',
+    };
+    const buttonName = '=';
+
+    //Act
+    const result = calculate(obj, buttonName);
+
+    //Assert
+    expect(result).toStrictEqual({
+      total: 'Unknown operation',
+      next: null,
+      operation: null,
+    });
+  });
+
 });
