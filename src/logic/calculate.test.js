@@ -122,6 +122,24 @@ describe('unit tests for calculate.js', () => {
     });
   });
 
+  test('+/- is clicked the result should be positive/negative', () => {
+    //Arrange
+    const obj = {
+      total: null,
+      next: 200,
+      operation: null,
+    };
+    const buttonName = '+/-';
+
+    //Act
+    const result = calculate(obj, buttonName);
+
+    //Assert
+    expect(result).toStrictEqual({
+      next: '-200',
+    });
+  });
+
   test('AC is clicked the result should be RESTART', () => {
     //Arrange
     const obj = {
