@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Calculator from './Calculator';
 
-describe('Calculator', () => { 
+describe('Calculator', () => {
   test('dislays the clicked number', () => {
     render(<Calculator />);
 
@@ -35,4 +35,4 @@ describe('Calculator', () => {
     fireEvent.click(button4);
     expect(resultPar.textContent).toBe('5');
   });
- });
+});

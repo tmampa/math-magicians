@@ -1,15 +1,15 @@
-import react from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import renderer from "react-test-renderer";
-import Quote from "./Quote";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import renderer from 'react-test-renderer';
+import Quote from './Quote';
 
-it("renders correctly", () => {
-  const tree =  renderer.create(
+it('renders correctly', () => {
+  const tree = renderer.create(
     <BrowserRouter>
       <Route>
         <Quote />
       </Route>
-    </BrowserRouter>
-  ).toJSON
+    </BrowserRouter>,
+  ).toJSON;
   expect(tree).toMatchSnapshot();
 });

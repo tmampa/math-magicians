@@ -1,9 +1,8 @@
 import calculate from './calculate';
 
-
 describe('unit tests for calculate.js', () => {
   test('= is clicked the result should be addition', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -11,10 +10,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: '120',
       next: null,
@@ -23,7 +22,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('= is clicked the result should be subtraction', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -31,10 +30,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: '80',
       next: null,
@@ -43,7 +42,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('= is clicked the result should be multiplication', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -51,10 +50,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: '2000',
       next: null,
@@ -63,7 +62,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('= is clicked the result should be Division', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -71,10 +70,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: '5',
       next: null,
@@ -83,7 +82,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('= is clicked the result should be modulo', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -91,10 +90,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: '0',
       next: null,
@@ -103,7 +102,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('= is clicked the result should be error Unknown operation', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -111,10 +110,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '=';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: 'Unknown operation',
       next: null,
@@ -123,7 +122,7 @@ describe('unit tests for calculate.js', () => {
   });
 
   test('+/- is clicked the result should be positive/negative', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: null,
       next: 200,
@@ -131,17 +130,17 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = '+/-';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       next: '-200',
     });
   });
 
   test('AC is clicked the result should be RESTART', () => {
-    //Arrange
+    // Arrange
     const obj = {
       total: 100,
       next: 20,
@@ -149,10 +148,10 @@ describe('unit tests for calculate.js', () => {
     };
     const buttonName = 'AC';
 
-    //Act
+    // Act
     const result = calculate(obj, buttonName);
 
-    //Assert
+    // Assert
     expect(result).toStrictEqual({
       total: 0,
       next: null,
