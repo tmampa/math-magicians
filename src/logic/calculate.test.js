@@ -122,4 +122,23 @@ describe('unit tests for calculate.js', () => {
     });
   });
 
+  test('AC is clicked the result should be RESTART', () => {
+    //Arrange
+    const obj = {
+      total: 100,
+      next: 20,
+      operation: '+',
+    };
+    const buttonName = 'AC';
+
+    //Act
+    const result = calculate(obj, buttonName);
+
+    //Assert
+    expect(result).toStrictEqual({
+      total: 0,
+      next: null,
+      operation: null,
+    });
+  });
 });
